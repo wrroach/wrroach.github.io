@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>W.R.Roach Ministries</title>
+<meta name="description" content="Christian books by W.R.Roach: devotionals, group studies, prison and reentry devotionals, and Bible word studies from the King James Bible.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F0E8D4; --ink:#1A1712; --muted:#5E5546; --gold:#8A6A2A; --line:#CDBF9F; --btn-ink:#F0E8D4;
+  --cover:#0A0A0A; --cover-ink:#F0E8D4; --cover-gold:#C6A15B;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0A0A0A; --ink:#F0E8D4; --muted:#B5AB95; --gold:#C6A15B; --line:#2E2A22; --btn-ink:#0A0A0A; }
+}
+:root[data-theme="dark"]{ --bg:#0A0A0A; --ink:#F0E8D4; --muted:#B5AB95; --gold:#C6A15B; --line:#2E2A22; --btn-ink:#0A0A0A; }
+html{ scroll-padding-top:env(safe-area-inset-top,0px); -webkit-text-size-adjust:100%; }
+*,*::before,*::after{ box-sizing:inherit; }
+body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:1.125rem; line-height:1.65; }
+a{ color:var(--gold); }
+a:focus-visible, .btn:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 22px; }
+header.top{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; padding:18px 0; border-bottom:1px solid var(--line); }
+.brand{ font-family:var(--display); font-weight:700; font-size:1.35rem; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+nav a{ color:var(--ink); text-decoration:none; margin-left:18px; font-size:1rem; }
+nav a:first-child{ margin-left:0; }
+nav a:hover{ color:var(--gold); }
+.hero{ padding:72px 0 64px; }
+.mark{ display:flex; align-items:center; gap:14px; width:220px; margin-bottom:26px; }
+.mark::before,.mark::after{ content:""; flex:1; height:1px; background:var(--gold); }
+.mark span{ width:12px; height:12px; background:var(--gold); transform:rotate(45deg); flex:none; }
+.hero h1{ font-family:var(--display); font-weight:600; font-size:clamp(3.4rem, 13vw, 7.5rem); line-height:.95; margin:0 0 22px; letter-spacing:-.01em; }
+.hero p{ max-width:34em; font-size:1.25rem; color:var(--ink); margin:0 0 30px; }
+.actions{ display:flex; flex-wrap:wrap; gap:12px; }
+.btn{ display:inline-block; padding:13px 22px; font-family:var(--body); font-size:1.05rem; text-decoration:none; border:1.5px solid var(--gold); }
+.btn.primary{ background:var(--gold); color:var(--btn-ink); }
+.btn.quiet{ color:var(--ink); }
+.shelf{ padding:44px 0 8px; border-top:1px solid var(--line); }
+.shelf h2, .page h2{ font-family:var(--display); font-weight:600; font-size:2.2rem; line-height:1.1; margin:0 0 26px; }
+ul.books{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:30px 44px; }
+@media (min-width:900px){ ul.books{ grid-template-columns:1fr 1fr; } }
+.book{ display:grid; grid-template-columns:116px 1fr; gap:18px; align-items:start; }
+.cover{ aspect-ratio:2/3; background:var(--cover); color:var(--cover-ink); text-decoration:none; display:flex; flex-direction:column; align-items:center; padding:16px 8px 10px; border:1px solid #2E2A22; text-align:center; }
+.cover .diamond{ width:6px; height:6px; background:var(--cover-gold); transform:rotate(45deg); margin:6px 0 10px; box-shadow:-14px 14px 0 -2.5px transparent; }
+.cover .ct{ font-family:"Liberation Serif", "Times New Roman", var(--display); font-weight:700; font-size:.68rem; line-height:1.15; text-transform:uppercase; letter-spacing:.02em; }
+.cover .cs{ font-family:var(--body); font-style:italic; color:var(--cover-gold); font-size:.5rem; line-height:1.3; margin-top:6px; }
+.cover .ca{ margin-top:auto; font-size:.5rem; font-weight:600; letter-spacing:.06em; border-top:1px solid var(--cover-gold); padding-top:4px; }
+.info h3{ font-family:var(--display); font-weight:700; font-size:1.45rem; line-height:1.15; margin:0 0 2px; }
+.info .sub{ font-style:italic; color:var(--muted); margin:0 0 8px; font-size:1rem; line-height:1.4; }
+.info p{ margin:0 0 8px; }
+.info .also{ font-size:.95rem; color:var(--muted); }
+.buy{ display:inline-block; margin-top:2px; font-size:1rem; }
+.page{ padding:52px 0; border-top:1px solid var(--line); }
+.page p{ max-width:36em; }
+footer{ border-top:1px solid var(--line); padding:28px 0 40px; color:var(--muted); font-size:.95rem; }
+footer p{ margin:0 0 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">W.R.Roach Ministries</a>
+    <nav aria-label="Main"><a href="#books">Books</a><a href="#about">About</a><a href="#teaching">Teaching</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="mark" aria-hidden="true"><span></span></div>
+      <h1>W.R.Roach</h1>
+      <p>Plain, honest books that dig into the Hebrew and Greek words beneath the King James Bible, written for people at the breaking point.</p>
+      <div class="actions">
+        <a class="btn primary" href="#books">Browse the books</a>
+        <a class="btn quiet" href="https://www.amazon.com/s?k=W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">All books on Amazon</a>
+      </div>
+    </section>
+
+    <div id="books">
+<section class="shelf"><h2>Daily devotionals</h2><ul class="books"><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Servant%E2%80%99s+Torch+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Servant’s Torch on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Servant’s Torch</span><span class="cs">A Year of Honest Faith</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Servant’s Torch</h3><p class="sub">A Year of Honest Faith</p><p>A devotional for every day of the year, the ordinary days and the hard ones.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=The+Servant%27s+Torch+Companion+Workbook+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Companion Workbook</a></p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Servant%E2%80%99s+Torch+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Anxious+and+Still+the+Man+of+the+House+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Anxious and Still the Man of the House on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Anxious and Still the Man of the House</span><span class="cs">A 30-Day Devotional</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Anxious and Still the Man of the House</h3><p class="sub">A 30-Day Devotional</p><p>For men carrying a family on their shoulders and a worried mind in their chest.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=Anxious+and+Still+the+Man+of+the+House+Companion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Companion Workbook</a></p>
+      <a class="buy" href="https://www.amazon.com/s?k=Anxious+and+Still+the+Man+of+the+House+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Here+For+God+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Here For God on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Here For God</span><span class="cs">A 30-Day Journey to Deny Yourself and Find Your Commission</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Here For God</h3><p class="sub">A 30-Day Journey to Deny Yourself and Find Your Commission</p><p>Thirty days on laying yourself down and finding what God made you for.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=Here+For+God+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li></ul></section><section class="shelf"><h2>Group studies</h2><ul class="books"><li class="book"><a class="cover" href="https://www.amazon.com/dp/B0HH4QVMZ1" target="_blank" rel="noopener" aria-label="Psalms for the Breaking Point on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Psalms for the Breaking Point</span><span class="cs">A 40-Day Journey to the Morning After</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Psalms for the Breaking Point</h3><p class="sub">A 40-Day Journey to the Morning After</p><p>Forty days in the Psalms, one Hebrew word at a time, with room on the page to write.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=Psalms+for+the+Breaking+Point+Facilitator%27s+Guide+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Facilitator’s Guide</a></p>
+      <a class="buy" href="https://www.amazon.com/dp/B0HH4QVMZ1" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/dp/B0HD5N8DSS" target="_blank" rel="noopener" aria-label="Dark Night of the Soul on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Dark Night of the Soul</span><span class="cs">A Raw Guide to Surviving the Furnace</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Dark Night of the Soul</h3><p class="sub">A Raw Guide to Surviving the Furnace</p><p>For the season when God feels silent and the fire won’t let up.</p><p class="also">Also available: <a href="https://www.amazon.com/dp/B0HJ33SKJ1" target="_blank" rel="noopener">Companion Workbook</a>, <a href="https://www.amazon.com/s?k=Dark+Night+of+the+Soul+Facilitator%27s+Guide+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Facilitator’s Guide</a></p>
+      <a class="buy" href="https://www.amazon.com/dp/B0HD5N8DSS" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+White+Stone+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The White Stone on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The White Stone</span><span class="cs">To Conquer Babylon</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The White Stone</h3><p class="sub">To Conquer Babylon</p><p>On walking the narrow path when the people closest to you don’t understand.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=The+White+Stone+To+Conquer+Babylon+The+Companion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Companion</a>, <a href="https://www.amazon.com/s?k=The+White+Stone+Facilitator%27s+Guide+Leading+Men+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Facilitator’s Guide</a></p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+White+Stone+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Feed+My+Sheep+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Feed My Sheep on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Feed My Sheep</span><span class="cs">A 19-Week Study in Loving Jesus Christ</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Feed My Sheep</h3><p class="sub">A 19-Week Study in Loving Jesus Christ</p><p>Nineteen weeks on Jesus’s charge to Peter: if you love me, feed my sheep.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=Feed+My+Sheep+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Great+Untangling+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Great Untangling on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Great Untangling</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Great Untangling</h3><p>Nine hard subjects, untangled and taken back to what Scripture actually says.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=The+Great+Untangling+Companion+Workbook+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Companion Workbook</a></p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Great+Untangling+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li></ul></section><section class="shelf"><h2>Prison and reentry</h2><ul class="books"><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Back+into+the+Fold%3A+Inside+the+Walls+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Back into the Fold: Inside the Walls on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Back into the Fold: Inside the Walls</span><span class="cs">A 90-Day Devotional</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Back into the Fold: Inside the Walls</h3><p class="sub">A 90-Day Devotional</p><p>Ninety days for men and women serving time.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=Back+into+the+Fold+Inside+the+Walls+Companion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Companion</a></p>
+      <a class="buy" href="https://www.amazon.com/s?k=Back+into+the+Fold%3A+Inside+the+Walls+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Back+into+the+Fold%3A+Across+the+Gate+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Back into the Fold: Across the Gate on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Back into the Fold: Across the Gate</span><span class="cs">A 90-Day Devotional</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Back into the Fold: Across the Gate</h3><p class="sub">A 90-Day Devotional</p><p>Ninety days for the walk out of prison and back into life.</p><p class="also">Also available: <a href="https://www.amazon.com/s?k=Back+into+the+Fold+Across+the+Gate+Companion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">Companion</a></p>
+      <a class="buy" href="https://www.amazon.com/s?k=Back+into+the+Fold%3A+Across+the+Gate+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li></ul></section><section class="shelf"><h2>Bible teaching</h2><ul class="books"><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Pavement+Prophets+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Pavement Prophets on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Pavement Prophets</span><span class="cs">Four Voices, One Warning, One Way Home</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Pavement Prophets</h3><p class="sub">Four Voices, One Warning, One Way Home</p><p>Habakkuk, Amos, Micah, and Zephaniah, speaking to a corrupt age.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Pavement+Prophets+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Remnant+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Remnant on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Remnant</span><span class="cs">Ancient Words for a Modern Collapse</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Remnant</h3><p class="sub">Ancient Words for a Modern Collapse</p><p>Old Testament words for the faithful few in a falling world.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Remnant+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Frequency+of+God+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Frequency of God on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Frequency of God</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Frequency of God</h3><p>A short, plain guide to hearing God.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Frequency+of+God+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Raw+Warfare+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Raw Warfare on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Raw Warfare</span><span class="cs">The Field Manual to Protect Your Home and Family</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Raw Warfare</h3><p class="sub">The Field Manual to Protect Your Home and Family</p><p>Spiritual warfare for fathers and mothers, made practical.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=Raw+Warfare+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Not+By+Blood+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Not By Blood on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Not By Blood</span><span class="cs">Who God Really Calls His People</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Not By Blood</h3><p class="sub">Who God Really Calls His People</p><p>What Scripture says makes someone one of God’s people.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=Not+By+Blood+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Contract+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Contract on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Contract</span><span class="cs">Breaking Free from the Denominational Mind Prison</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Contract</h3><p class="sub">Breaking Free from the Denominational Mind Prison</p><p>Reading the Bible for yourself, outside the lines a denomination draws.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Contract+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=The+Corporate+Church+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="The Corporate Church on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Corporate Church</span><span class="cs">Something Has to Change</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Corporate Church</h3><p class="sub">Something Has to Change</p><p>What happened when the church started running like a business.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=The+Corporate+Church+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/dp/B0HD121HZH" target="_blank" rel="noopener" aria-label="The Case for the Apostle Paul on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">The Case for the Apostle Paul</span><span class="cs">A Victim of the Children of Darkness</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>The Case for the Apostle Paul</h3><p class="sub">A Victim of the Children of Darkness</p><p>A close look at Paul and the case against him.</p>
+      <a class="buy" href="https://www.amazon.com/dp/B0HD121HZH" target="_blank" rel="noopener">View on Amazon</a></div></li></ul></section><section class="shelf"><h2>The End Times series</h2><ul class="books"><li class="book"><a class="cover" href="https://www.amazon.com/dp/B0HDGBR15B" target="_blank" rel="noopener" aria-label="Rapture Lie on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Rapture Lie</span><span class="cs">A Forensic Case Against the Secret Rapture</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Rapture Lie</h3><p class="sub">A Forensic Case Against the Secret Rapture</p><p>Tracing the secret-rapture teaching back to where it began.</p>
+      <a class="buy" href="https://www.amazon.com/dp/B0HDGBR15B" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Tribulation+Delusion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Tribulation Delusion on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Tribulation Delusion</span><span class="cs">Daniel’s Seventy Weeks</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Tribulation Delusion</h3><p class="sub">Daniel’s Seventy Weeks</p><p>Daniel 9, walked through one week at a time.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=Tribulation+Delusion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li><li class="book"><a class="cover" href="https://www.amazon.com/s?k=Israel+Delusion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Israel Delusion on Amazon">
+      <span class="diamond" aria-hidden="true"></span><span class="ct">Israel Delusion</span><span class="cs">Who the Bible Actually Means When It Says “Israel”</span><span class="ca">W.R.ROACH</span></a><div class="info"><h3>Israel Delusion</h3><p class="sub">Who the Bible Actually Means When It Says “Israel”</p><p>A word-by-word study of who God calls Israel.</p>
+      <a class="buy" href="https://www.amazon.com/s?k=Israel+Delusion+W.R.Roach&amp;i=stripbooks" target="_blank" rel="noopener">View on Amazon</a></div></li></ul></section>
+    </div>
+
+    <section class="page" id="about">
+      <h2>About</h2>
+      <p>W.R.Roach writes Christian nonfiction under W.R.Roach Ministries. His books take the words beneath the English of the King James Bible and set them down in plain language, for people in grief, in recovery, behind bars, or simply worn out.</p>
+      <p>Many of the books are built for groups. Companion workbooks and facilitator’s guides let a church, a recovery program, or a chaplain lead them, with room on the page for honest answers.</p>
+    </section>
+
+    <section class="page" id="teaching">
+      <h2>Teaching</h2>
+      <p>Video teachings will be posted here. Until then, every book above is a place to start.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 W.R.Roach Ministries</p>
+    <p>Scripture quotations are from the King James Bible.</p>
+  </footer>
+</div>
+</body>
+</html>
